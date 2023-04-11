@@ -24,7 +24,7 @@ convertBtn.addEventListener('click', () => {
     const resultObject = { Accounts: emailAccounts };
 
     // Chuyển đổi đối tượng thành chuỗi JSON
-    const json = JSON.stringify(resultObject);
+    const json = JSON.stringify(resultObject,null,3);
 
     // Tạo một TextBox mới để hiển thị kết quả
     const resultTextbox = document.createElement('textarea');
