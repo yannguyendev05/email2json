@@ -21,7 +21,7 @@ convertBtn.addEventListener('click', () => {
     const emailAccounts = emailList.map((line) => {
         const [username, password] = line.trim().split('|');
         return { Username: username, Password: password };
-    });
+    }); 
 
     // Tạo đối tượng chứa danh sách EmailAccount
     const resultObject = { Accounts: emailAccounts };
