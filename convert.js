@@ -16,14 +16,18 @@ convertBtn.addEventListener('click', () => {
     // Lấy danh sách email và mật khẩu từ textarea
     const emailList = emailListTextarea.value.trim().split('\n');
 
+  
     // Tạo danh sách EmailAccount
     const emailAccounts = emailList.map((line) => {
-        const [username, password] = line.trim().split('|');
-        return { username, password };
+        const [username, password] = line.trim().split(':');
+        return { Username: username, Password: password };
     });
 
-    // Chuyển đổi danh sách EmailAccount thành chuỗi JSON
-    const json = JSON.stringify(emailAccounts);
+    // Tạo đối tượng chứa danh sách EmailAccount
+    const resultObject = { Accounts: emailAccounts };
+
+    // Chuyển đổi đối tượng thành chuỗi JSON
+    const json = JSON.stringify(resultObject);
 
     // Tạo một TextBox mới để hiển thị kết quả
     const resultTextbox = document.createElement('textarea');
