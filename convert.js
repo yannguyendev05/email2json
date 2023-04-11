@@ -18,7 +18,7 @@ convertBtn.addEventListener('click', () => {
 
     // Tạo danh sách EmailAccount
     const emailAccounts = emailList.map((line) => {
-        const [username, password] = line.trim().split(':');
+        const [Username, Password] = line.trim().split('|');
         return { username, password };
     });
 
